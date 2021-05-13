@@ -122,7 +122,9 @@ resource "azurerm_virtual_machine" "catapp" {
     disable_password_authentication = false
   }
 
-  tags = {}
+  tags = {
+    Billable = "true"
+  }
 }
 
 # We're using a little trick here so we can run the provisioner without
